@@ -204,3 +204,12 @@ ActionView::MissingTemplate (Missing template posts/create, application/create w
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (34.9ms)
+
+
+Started POST "/posts" for 75.134.6.12 at 2018-01-15 23:05:40 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4Dz8IwiaFnenS7Rzbq5AE+yGYKqMWWTK5/6AmqVdefRQb0XjBgsJuHF4SAGU11jXxHrV7jFOyfwsquUPmLFnIQ==", "title"=>"hello", "description"=>"greeting", "commit"=>"Submit Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "hello"], ["description", "greeting"], ["created_at", "2018-01-15 23:05:40.939633"], ["updated_at", "2018-01-15 23:05:40.939633"]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://67.205.152.27:60013/posts/3
