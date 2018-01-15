@@ -213,3 +213,12 @@ Processing by PostsController#create as HTML
   [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "hello"], ["description", "greeting"], ["created_at", "2018-01-15 23:05:40.939633"], ["updated_at", "2018-01-15 23:05:40.939633"]]
   [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
 Redirected to http://67.205.152.27:60013/posts/3
+Completed 302 Found in 30ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/posts/3" for 75.134.6.12 at 2018-01-15 23:05:40 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered posts/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.2ms)
