@@ -40,3 +40,16 @@ Processing by PostsController#show as HTML
   [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
   Rendered posts/show.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 27ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 75.134.6.12 at 2018-01-15 23:03:28 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/railties-4.2.10/lib/rails/templates/rails/welcome/index.html.erb (1.7ms)
+Completed 200 OK in 20ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 75.134.6.12 at 2018-01-15 23:03:44 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (5.6ms)
